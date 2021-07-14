@@ -6,6 +6,7 @@ static const Block blocks[] = {
   {"GPUMem:", "nvidia-smi -q | grep \"Used\\|Total\" | awk 'NR==1{l = $3}NR==2{l=l\" \"$3}END{print l}' | awk '{print $2\"M/\"$1\"M\"}'", 2, 0},
   {"Battery:",     "sb-battery",                                         5,  3},
   {"",     "setxkbmap -query | grep -q 'us' && echo US || echo RU",      0,  2},
+  {"",     "sb-internet"   ,                                             5,  4},
 	{"",     "sb-clock",                                                   60, 1},
 };
 
